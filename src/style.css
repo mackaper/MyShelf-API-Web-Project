@@ -1,0 +1,435 @@
+.searchInput {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 8px;
+    margin-top: 30px;
+    font-size: 16px;
+    border: 0px solid #fff;
+    /* font-family: 'Instrument Serif', serif; */
+    position: relative;
+}
+
+.searchResultsContainer{
+    position: relative
+}
+
+.searchResults {
+    position: absolute;
+    top: 100%;
+    z-index: 2;
+    border-collapse: collapse;
+    box-sizing: border-box;
+    width: 50%;
+    padding: 8px;
+    font-size: 16px;
+    border: 10px solid #fff;
+    background-color: white;
+}
+
+.searchButton {
+    padding: 8px 16px; 
+    margin-left: 20px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: white !important;
+    background-color: #9e735b; /* Sets the background to light blue */
+    color: #000; /* Ensures the text is readable */
+    cursor: pointer; /* Makes the cursor a pointer to indicate it's clickable */
+    transition: transform 0.2s ease, background-color 0.2s ease;
+}
+
+/* Add hover effect */
+.searchButton:hover {
+    background-color: #c5a899; 
+}
+
+/* Add active (click) effect */
+.searchButton:active {
+    transform: scale(0.95); 
+    background-color: #9e735b;
+}
+
+.MyShelf {
+    color: #6f573d;
+    font-family: 'Instrument Serif', serif;
+    text-align: left; /* Optional: Center align */
+    margin: 20px 0; /* Optional: Adjust spacing */
+    font-size: 60px;
+    cursor: pointer;
+}
+
+.MyShelfLogin{
+    color: #6f573d;
+    font-family: 'Instrument Serif', serif;
+    text-align: left; /* Optional: Center align */
+    margin: 20px 0; /* Optional: Adjust spacing */
+    font-size: 100px;
+}
+.LoginContainer {
+    margin-top: 13%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -40px;
+}
+.LoginButtonContainer{
+    display: flex;
+    justify-content: center;
+
+}
+
+.LoginSubtext {
+    color: #6f573d;
+    display: flex;
+    justify-content: center;
+    font-size: 23px;
+    word-spacing: 4px;
+}
+.LoginButton {
+    background-color: #5e4031;
+    color: white;
+    font-family: 'Instrument Serif', serif;
+    font-size: 20px; 
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+.LoginButton:hover {
+    background-color: #c5a899;
+}
+
+body {
+    background-color: #f7e9d7; /* Replace with your preferred background colour */
+    margin: 40px; /* Remove default margin for full background coverage */
+    padding: 10; /* Optional, ensures no extra spacing */
+    font-family: 'Instrument Serif', serif; /* Optional, for consistent typography */
+}
+
+.detailsBox {
+    background-color: white; /* Replace with your preferred background colour */
+    margin: 20px 0; /* Remove default margin for full background coverage */
+    font-family: 'Instrument Serif', serif; /* Optional, for consistent typography */
+    font-size: 20px;
+    border: 5px solid #9e735b;
+    border-radius: 5px;
+}
+
+.detailsContent {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Space between IMG and text */
+}
+
+
+
+.detailsTitle{
+    color: #6f573d;
+    font-family: 'Instrument Serif', serif;
+    text-align: left; /* Optional: Center align */
+    margin-left: 20px;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.detailsText{
+    color: #6f573d;
+    font-family: 'Instrument Serif', serif;
+    text-align: left; /* Optional: Center align */
+    padding-left: 20px;
+    font-size: 20px;
+    margin-bottom: 20px;
+    flex-direction: column;
+}
+
+.coverImage{
+    width: 200px;
+    flex-shrink: 0;
+    margin-left: 30px;
+    margin-bottom: 20px;
+}
+
+
+.alignRight {
+    text-align: right;
+}
+
+.resultRow:hover {
+    background-color: #cacaca; 
+}
+
+.resultRow:active {
+    transform: scale(0.95); 
+    background-color: #adadad;
+}
+
+.loadingImage {
+    width: 150px;
+    border-radius: 25px;
+    padding: 20px;
+    margin: 20px;
+    position: absolute;
+    top: 100%;
+    z-index: 10;
+}
+
+.coverNotFound{
+    padding: 40px;
+    padding-top: 120px;
+    padding-bottom: 120px;
+    background-color: #f7e9d7;
+}
+
+.bookViewButton {
+    padding: 8px 16px; 
+    float: right;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    color: white !important;
+    background-color: #9e735b; 
+    color: #000; 
+    cursor: pointer; 
+}
+
+.bookViewButton:hover {
+    background-color: #c5a899; 
+}
+
+.bookViewButton:active {
+    transform: scale(0.95); 
+    background-color: #9e735b;
+}
+
+.bookViewButton:disabled {
+    background-color: #d3d3d3;
+    color: #a9a9a9;
+    cursor: not-allowed; 
+    border-color: #a9a9a9;
+    transform: none;
+}
+
+.feedbackMessage {
+    color: green;
+    font-size: 14px;
+    margin-top: 5px;
+    float: right;
+    margin-right: 10px
+}
+
+.shelfEdge {
+    background-color: #583b2c;
+    height: 10px;
+    margin-left: 3%;
+    margin-right: 3%;
+    position: relative;
+    z-index: 1;
+}
+
+.shelfTop {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-end; 
+    background-color: transparent;
+    gap: 10px; 
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+    border: 20px solid transparent;
+    border-bottom: 40px solid #7e5440;
+}
+
+.book {
+    height: 140px;
+    width: 40px;
+    margin: 0 10px -30px 10px;
+    background-color: rgb(219, 104, 83);
+    border-left: 2px solid rgb(87, 66, 66);
+    border-right: 2px solid rgb(87, 66, 66);
+    border-top: 15px solid rgb(241, 241, 241);
+    box-shadow: 0 8px 2px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    writing-mode: vertical-rl;
+    font-size: 13px;
+    font-weight: bold;
+    color: rgb(40, 37, 37);
+    padding: 8px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.book:hover {
+    transform: translateY(10px) scale(1.05);
+}
+
+.userNotes{
+    width: 85%;
+    border: 1px solid black;
+    height: 30px;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+textarea {
+    width: 90%; /* Adjust width as needed */
+    height: 150px; /* Adjust height as needed */
+    font-size: 16px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    resize: vertical; /* Allow users to resize vertically */
+}
+
+
+.help-button {
+    position: fixed;
+    bottom: 20px;  /* Position it at the bottom of the page */
+    right: 20px;   /* Position it at the right side */
+    padding: 10px 20px;
+    background-color: #9e735b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9;
+}
+
+.help-button:hover {
+    background-color: #c5a899;
+}
+
+.modal {
+    position: fixed; 
+    bottom: 20px;  /* Position it at the bottom of the page */
+    right: 20px;   /* Position it at the right side */
+    padding: 60px 0px;
+    z-index: 10;
+
+}
+
+/* Style for the modal content */
+.modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: left;
+}
+
+/* Close button styling */
+.close-btn {
+    font-size: 28px;
+    font-weight: bold;
+    color: #aaa;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;  /* Position it at the bottom of the page */
+    right: 20px;   /* Position it at the right side */
+    padding: 50px 0px;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.logout-btn{
+    float: right;
+    top: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    background-color: #9e735b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Instrument Serif', serif;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 9; 
+}
+
+.logout-btn:hover {
+    background-color: #c5a899;
+}
+
+.emptyShelf {
+    margin-left: 3%;
+    margin-right: 3%;
+    padding: 10px;
+    position: relative;
+    z-index: 1;
+}
+
+.rating {
+    max-width: 120px;
+}
+
+@media (max-width: 500px) {
+    .coverImage{
+        
+        padding: 20px;
+       
+    }
+
+    .detailsContent {
+        display: flex;
+        align-items: flex-start;
+        gap:0px; /* Space between IMG and text */
+        width: 250px;
+        
+    }
+
+    .detailsContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .detailsText{
+        color: #6f573d;
+        font-family: 'Instrument Serif', serif;
+        text-align: left; /* Optional: Center align */
+        padding-left: 20px;
+        font-size: 20px;
+        margin-bottom: 20px;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .detailsBox {
+        background-color: white; /* Replace with your preferred background colour */
+        margin: 20px 0; /* Remove default margin for full background coverage */
+        font-family: 'Instrument Serif', serif; /* Optional, for consistent typography */
+        font-size: 20px;
+        border: 5px solid #9e735b;
+        border-radius: 5px;
+        
+    }
+
+    .detailsTitle{
+        color: #6f573d;
+        font-family: 'Instrument Serif', serif;
+        text-align: left; /* Optional: Center align */
+        margin-left: 10px;
+        padding: 10px;
+        font-size: 35px;
+    }
+
+}
